@@ -22,7 +22,6 @@ class BootJpaTestApplicationTests {
         IntStream.rangeClosed(1,100).forEach(i -> {
             MemoEntity memo = MemoEntity.builder().memoText("Memo  " + i).build();
             memoRepository.save(memo);
-            //memoRepository.
         });
     }
     /*

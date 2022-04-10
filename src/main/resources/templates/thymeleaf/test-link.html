@@ -5,9 +5,11 @@
     <title>Title</title>
 </head>
 <body>
-memo
-<a th:href="@{/memos}">memos</a>
-<p th:text="${memo.memoText}"></p>
-
+    <ul th:each="dto : ${list}">
+        <li>
+            [[${dto.id}]]
+            <span th:text="${dto.id}"></span>
+        </li>
+    </ul>
 </body>
 </html>
