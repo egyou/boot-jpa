@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Delete</h1>
+<form action="#" th:action="@{'/memos/' + ${memo.seq}}" th:object="${memo}" th:method="delete">
+    <p>Id: <input type="text" th:field="*{seq}" th:value="*{seq}"/></p>
+    <p><input type="submit" value="Delete" /> <input type="reset" value="Reset" /></p>
+</form>
+</body>
+</html>

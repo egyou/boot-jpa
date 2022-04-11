@@ -6,11 +6,13 @@
 </head>
 <body>
 memo list
-
+<table>
 <tr th:each="memo: ${list}">
+
     <td th:text="${memo.seq}" />
     <td th:text="${memo.memoText}" />
+    <td><a th:href="@{'/memos/' + ${memo.seq}}">detail</a><br/></td>
 </tr>
-
+</table>
 </body>
 </html>

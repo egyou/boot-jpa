@@ -1,5 +1,6 @@
 package iducs.springboot.bootjpa;
 
+import iducs.springboot.bootjpa.domain.Memo;
 import iducs.springboot.bootjpa.entity.MemoEntity;
 import iducs.springboot.bootjpa.repository.MemoRepository;
 import org.junit.jupiter.api.Test;
@@ -30,7 +31,9 @@ public class MemoRepositoryTests {
         System.out.println("========================================");
 
         if(result.isPresent()) {
-            MemoEntity memo = result.get();
+            Memo memo = Memo.builder()
+                    .seq(result.get().getSeq())
+                    .memoText(result.get().getMemoText()).build();
             System.out.println(">>>>> " + memo.getSeq() + memo.getMemoText());
         }
 
